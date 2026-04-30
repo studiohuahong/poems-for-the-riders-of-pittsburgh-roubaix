@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poems for Pittsburgh Roubaix</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-live="polite">
+      <p class="loader-label">Loading images</p>
+      <p class="loader-progress" id="loader-progress">0 / 0</p>
+    </div>
+
+    <main class="page-shell">
+      <section class="intro" id="intro">
+        <h1>冩在匹茲堡魯貝的詩</h1>
+        <p class="instruction">
+          -
+          <br>
+          拍攝於莫農加希拉河河畔的鴨子谷，構想與紐約佈魯克林，二零二六年。
+          <br>
+          獻給鋼鐵之城，朋友們，和我們的故事。
+          <br>
+          向右劃開始閱讀。
+        </p>
+      </section>
+
+      <section class="gallery-wrap">
+        <div class="gallery" id="gallery" aria-label="Horizontal image strip"></div>
+        <div class="scrollbar-overlay" id="scrollbar-overlay" aria-hidden="true">
+          <div class="scrollbar-thumb" id="scrollbar-thumb"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <p class="footer-text">
+        © 2026 <a href="https://studiohuahong.com">studiohuahong</a>. 版權所有
+      </p>
+      <button class="footer-button" id="back-to-front" type="button">回到起始</button>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
