@@ -1,0 +1,50 @@
+{
+  "theme": {
+    "fonts": {
+      "body": {
+        "zh": "\"Helvetica Neue\", \"Avenir Next\", \"Segoe UI\", sans-serif",
+        "en": "\"Helvetica Neue\", \"Avenir Next\", \"Segoe UI\", sans-serif"
+      },
+      "h1": {
+        "zh": "\"Noto Serif SC\", serif",
+        "en": "\"Monomakh\", system-ui"
+      }
+    }
+  },
+  "ui": {
+    "loaderLabel": {
+      "zh": "載入圖片",
+      "en": "Loading images"
+    },
+    "introTitle": {
+      "zh": "冩在匹茲堡魯貝的詩",
+      "en": "POEMS WRITTEN FOR THE RIDERS OF PITTSBURGH ROUBAIX"
+    },
+    "introInstruction": {
+      "zh": [
+        "-",
+        "拍攝於莫農加希拉河河畔的鴨子谷，構想與紐約佈魯克林，二零二六年。",
+        "獻給鋼鐵之城，朋友們，和這裡的故事。",
+        "向右劃開始閱讀。"
+      ],
+      "en": [
+        "-",
+        "Captured at Duck Hollow along the Monongahela River. Created in Brooklyn, New York, 2026.",
+        "For the City of Steel, friendships, and the stories that happened here.",
+        "Swipe right to begin."
+      ]
+    },
+    "endTitle": {
+      "zh": "完",
+      "en": "the End."
+    },
+    "footerHtml": {
+      "zh": "© 2026 <a href=\"https://studiohuahong.com\">studiohuahong</a>. 版權所有",
+      "en": "© 2026 <a href=\"https://studiohuahong.com\">studiohuahong</a>. All rights reserved."
+    },
+    "backToFront": {
+      "zh": "回到起始",
+      "en": "Back to Front"
+    }
+  }
+}
