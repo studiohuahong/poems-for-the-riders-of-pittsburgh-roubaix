@@ -1,5 +1,5 @@
 # Poems for the Riders of Pittsburgh Roubaix
 
-A love letter to the city, my friends, and our stories. 
+For the City of Steel, friendships, and the stories that happened here.
 
 © 2026 studiohuahong. All rights reserved.

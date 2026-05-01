@@ -3,6 +3,15 @@
   --fg: #101010;
   --muted: rgba(16, 16, 16, 0.58);
   --line: rgba(16, 16, 16, 0.18);
+  --gallery-image-height: max(100vh, 800px);
+  --body-font: "Helvetica Neue", "Avenir Next", "Segoe UI", sans-serif;
+  --h1-font: "Noto Serif SC", serif;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --gallery-image-height: max(100dvh, 800px);
+  }
 }
 
 * {
@@ -19,7 +28,7 @@ body {
   overflow: hidden;
   background: var(--bg);
   color: var(--fg);
-  font-family: "Helvetica Neue", "Avenir Next", "Segoe UI", sans-serif;
+  font-family: var(--body-font);
 }
 
 .page-shell {
@@ -63,7 +72,8 @@ body {
   font-size: 1.1rem;
 }
 
-.intro {
+.intro,
+.end {
   position: fixed;
   z-index: 3;
   top: 50%;
@@ -77,14 +87,19 @@ body {
     visibility 240ms ease;
 }
 
-.intro.is-hidden {
+.intro.is-hidden,
+.end.is-hidden {
   opacity: 0;
   visibility: hidden;
 }
 
+body.is-switching-language .language-switch-layer {
+  opacity: 0;
+}
+
 h1 {
   margin: 0;
-  font-family: "Noto Serif SC", serif;
+  font-family: var(--h1-font);
   font-weight: 400;
   font-style: normal;
   font-size: clamp(2.6rem, 6vw, 5.2rem);
@@ -99,6 +114,33 @@ h1 {
   font-size: 0.95rem;
   line-height: 1.45;
   color: #ffffff;
+}
+
+.poem-overlays {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+}
+
+.poem-overlay {
+  position: fixed;
+  left: var(--poem-x, 50%);
+  top: var(--poem-y, 50%);
+  width: min(60rem, calc(100vw - 3rem));
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 240ms ease,
+    visibility 240ms ease;
+}
+
+.poem-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .gallery-wrap {
@@ -130,8 +172,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  height: 100dvh;
+  height: var(--gallery-image-height);
   overflow: hidden;
 }
 
@@ -179,6 +220,7 @@ h1 {
   transform: translateX(-50%);
   font-size: 0.8rem;
   color: var(--muted);
+  transition: opacity 240ms ease;
 }
 
 .footer-text {
@@ -224,9 +266,8 @@ h1 {
     width: calc(100vw - 2rem);
   }
 
-  .gallery-item {
-    height: 100svh;
-    height: 100dvh;
+  .poem-overlay {
+    width: calc(100vw - 2rem);
   }
 
   .site-footer {

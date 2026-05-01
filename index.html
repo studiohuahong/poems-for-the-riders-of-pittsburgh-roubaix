@@ -9,39 +9,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monomakh&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="loader" id="loader" aria-live="polite">
-      <p class="loader-label">Loading images</p>
+      <p class="loader-label" id="loader-label">Loading images</p>
       <p class="loader-progress" id="loader-progress">0 / 0</p>
     </div>
 
     <main class="page-shell">
-      <section class="intro" id="intro">
-        <h1>冩在匹茲堡魯貝的詩</h1>
-        <p class="instruction">
+      <section class="intro language-switch-layer" id="intro">
+        <h1 id="intro-title">冩在匹茲堡魯貝的詩</h1>
+        <p class="instruction" id="intro-instruction">
           -
           <br>
           拍攝於莫農加希拉河河畔的鴨子谷，構想與紐約佈魯克林，二零二六年。
           <br>
-          獻給鋼鐵之城，朋友們，和我們的故事。
+          獻給鋼鐵之城，朋友們，和這裡的故事。
           <br>
           向右劃開始閱讀。
         </p>
       </section>
+      <section class="end is-hidden language-switch-layer" id="end" aria-hidden="true">
+        <h1 id="end-title">完</h1>
+      </section>
 
       <section class="gallery-wrap">
         <div class="gallery" id="gallery" aria-label="Horizontal image strip"></div>
+        <div class="poem-overlays language-switch-layer" id="poem-overlays" aria-live="polite"></div>
         <div class="scrollbar-overlay" id="scrollbar-overlay" aria-hidden="true">
           <div class="scrollbar-thumb" id="scrollbar-thumb"></div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" id="footer">
-      <p class="footer-text">
+    <footer class="site-footer language-switch-layer" id="footer">
+      <p class="footer-text" id="footer-text">
         © 2026 <a href="https://studiohuahong.com">studiohuahong</a>. 版權所有
       </p>
+      <button class="footer-button" id="language-toggle" type="button">中/EN</button>
       <button class="footer-button" id="back-to-front" type="button">回到起始</button>
     </footer>
 
