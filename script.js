@@ -40,9 +40,7 @@ let dragOffsetX = 0;
 let lastLoggedPercent = null;
 let siteContent = null;
 let isSwitchingLanguage = false;
-let currentLanguage = languages.includes(localStorage.getItem("preferredLanguage"))
-  ? localStorage.getItem("preferredLanguage")
-  : "zh";
+let currentLanguage = "zh";
 let poems = [];
 
 loaderProgress.textContent = `0 / ${imageSources.length}`;
